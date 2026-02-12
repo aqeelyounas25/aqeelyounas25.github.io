@@ -32,6 +32,7 @@ body{
 .nav-inner{
   display:flex;
   justify-content:space-between;
+  align-items:center;
   padding:14px 10%;
 }
 
@@ -47,26 +48,30 @@ body{
 .hero{
   display:flex;
   gap:40px;
-  padding:70px 10%;
+  padding:70px 10% 40px 10%;
   align-items:center;
+  justify-content:space-between;
 }
 
 .hero-card{
-  max-width:700px;
+  max-width:720px;
 }
 
-h1{font-size:42px;margin:10px 0;}
+h1{
+  font-size:42px;
+  margin:10px 0;
+}
 
 .lead{
   color:var(--muted);
   line-height:1.7;
-  margin-bottom:14px;
+  margin:0 0 14px 0;
 }
 
 .interests{
   font-size:14px;
   color:var(--muted);
-  margin-bottom:20px;
+  margin:6px 0 20px 0;
 }
 
 .btn{
@@ -76,14 +81,26 @@ h1{font-size:42px;margin:10px 0;}
   font-weight:bold;
   margin-right:10px;
   font-size:14px;
+  display:inline-block;
 }
 
-.btn-primary{background:var(--accent);color:#053a28;}
-.btn-ghost{border:1px solid rgba(255,255,255,0.3);color:white;}
+.btn-primary{
+  background:var(--accent);
+  color:#053a28;
+}
+
+.btn-ghost{
+  border:1px solid rgba(255,255,255,0.3);
+  color:white;
+}
+
+.btn-ghost:hover{background:rgba(255,255,255,0.08);}
 
 .hero-img{
   width:300px;
   border-radius:14px;
+  border:1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.35);
 }
 
 .section{
@@ -92,23 +109,48 @@ h1{font-size:42px;margin:10px 0;}
   padding:60px 10%;
 }
 
-.section h2{color:#0f2742;}
+.section h2{
+  color:#0f2742;
+  margin:0 0 12px 0;
+}
+
+.section p{
+  margin:0 0 12px 0;
+  line-height:1.65;
+}
+
+.section ul{
+  margin:8px 0 0 18px;
+}
+
+a.inline-link{
+  color:#0f2742;
+  font-weight:700;
+  text-decoration:none;
+}
+
+a.inline-link:hover{ text-decoration:underline; }
 
 .footer{
   padding:25px 10%;
   font-size:13px;
   color:rgba(255,255,255,0.7);
+  border-top:1px solid rgba(255,255,255,0.15);
 }
 
 @media(max-width:900px){
-  .hero{flex-direction:column-reverse;}
+  .hero{flex-direction:column-reverse; align-items:flex-start;}
+  .hero-img{width:100%; max-width:360px;}
+  .nav-inner{padding:14px 6%;}
+  .hero{padding:60px 6% 30px 6%;}
+  .section{padding:50px 6%;}
+  .footer{padding:22px 6%;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <div class="nav">
   <div class="nav-inner">
     <div><b>Aqeel Younas</b></div>
@@ -121,85 +163,81 @@ h1{font-size:42px;margin:10px 0;}
   </div>
 </div>
 
-<!-- HERO / ABOUT -->
 <div class="hero">
   <div class="hero-card">
-
     <h1>Aqeel Younas</h1>
 
     <p class="lead">
-I am Aqeel Younas, holding an MBA and a Master’s degree in Project Management and Business Engineering from CNAM Paris. 
-My research lies at the intersection of entrepreneurship, strategy, and SME development, with a focus on how 
-entrepreneurial leadership shapes firm competitiveness and firm performance in manufacturing SMEs.
+      I am Aqeel Younas, holding an MBA and a Master’s degree in Project Management and Business Engineering from CNAM Paris.
+      My research lies at the intersection of entrepreneurship, strategy, and SME development, with a focus on how
+      entrepreneurial leadership shapes firm competitiveness and firm performance in manufacturing SMEs.
     </p>
 
     <p class="lead">
-In my master’s thesis, I conducted a quantitative study based on survey data from 200 manufacturing SMEs and examined 
-structural relationships and mediation effects using PLS-SEM in SmartPLS. This research provides empirical evidence on 
-SME growth and competitiveness in emerging economies, particularly within industrial clusters in Punjab, Pakistan.
+      In my master’s thesis, I conducted a quantitative study using survey data from 200 manufacturing SMEs and tested
+      direct and mediation relationships using PLS-SEM in SmartPLS. The context of the study is Punjab, Pakistan, with a
+      focus on industrial clusters in Lahore, Sialkot, and Gujrat.
     </p>
 
     <p class="lead">
-I am currently preparing to pursue a PhD to deepen this research agenda, extend cross-country evidence, and develop 
-theory-driven insights that support sustainable SME performance. I am especially interested in collaborative, data-driven 
-research that connects academic knowledge with meaningful managerial and policy impact.
+      I am preparing to pursue a PhD to deepen this research agenda, extend cross-country evidence, and develop
+      theory-driven insights that support sustainable SME performance and competitiveness.
     </p>
 
     <p class="interests">
-Research interests: Entrepreneurial leadership, SME competitiveness, firm performance, PLS-SEM, emerging economy 
-entrepreneurship, and industrial clusters.
+      Research interests: Entrepreneurial leadership, SME competitiveness, firm performance, PLS-SEM, emerging economy entrepreneurship, and industrial clusters.
     </p>
 
-    <a class="btn btn-primary" href="cv.pdf" target="_blank">Download CV</a>
-    <a class="btn btn-ghost" href="#research">View Research</a>
-
+    <a class="btn btn-primary" href="cv.pdf" target="_blank" rel="noopener">Download CV</a>
+    <a class="btn btn-ghost" href="#research">View research</a>
   </div>
 
   <img class="hero-img" src="Photo.jpg" alt="Aqeel Younas">
 </div>
 
-<!-- RESEARCH -->
 <div class="section" id="research">
   <h2>Research</h2>
   <p>
-My work examines how entrepreneurial leadership influences firm competitiveness and firm performance in manufacturing SMEs 
-through quantitative structural modeling. I focus on emerging economies where SME development plays a critical role in 
-economic growth, innovation, and employment generation.
+    My work examines how entrepreneurial leadership influences firm competitiveness and firm performance in manufacturing SMEs
+    through quantitative structural modeling. I focus on emerging economies where SME development plays a key role in jobs,
+    innovation, and long-term growth.
   </p>
 </div>
 
-<!-- THESIS -->
 <div class="section" id="thesis">
   <h2>Master’s Thesis</h2>
   <p>
-The Impact of Entrepreneurial Leadership on Firm Performance: The Mediating Role of Firm Competitiveness.
+    <b>The Impact of Entrepreneurial Leadership on Firm Performance: The Mediating Role of Firm Competitiveness.</b>
   </p>
   <ul>
-    <li>Cross-sectional survey of 200 manufacturing SMEs</li>
-    <li>Analysis using SmartPLS (PLS-SEM)</li>
-    <li>Direct and mediation structural relationships</li>
+    <li>Design: Cross-sectional survey</li>
+    <li>Sample: N = 200 manufacturing SMEs</li>
+    <li>Method: PLS-SEM (SmartPLS), including mediation testing</li>
   </ul>
 </div>
 
-<!-- PUBLICATIONS -->
 <div class="section" id="publications">
   <h2>Publications</h2>
   <p>
-Working paper based on the master’s thesis. Journal submission in progress.
+    Manuscript submitted based on my master’s thesis:
+    <b>The Impact of Entrepreneurial Leadership on Firm Performance: The Mediating Role of Firm Competitiveness.</b>
   </p>
 </div>
 
-<!-- CONTACT -->
 <div class="section" id="contact">
   <h2>Contact</h2>
   <p>Email: aqeel.younas25@gmail.com</p>
   <p>Location: Paris, France</p>
-  <p>LinkedIn: add your profile link</p>
-  <p>Google Scholar: to be updated</p>
+  <p>
+    LinkedIn:
+    <a class="inline-link" href="https://www.linkedin.com/in/aqeel-younas/" target="_blank" rel="noopener">
+      https://www.linkedin.com/in/aqeel-younas/
+    </a>
+  </p>
 </div>
 
 <div class="footer">
-© Aqeel Younas
+  © Aqeel Younas
 </div>
 
 </body>
