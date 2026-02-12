@@ -25,15 +25,21 @@ body{
 .nav{
   position:sticky;
   top:0;
+  z-index:10;
   background:rgba(15,39,66,0.95);
   border-bottom:1px solid rgba(255,255,255,0.15);
 }
 
 .nav-inner{
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  justify-content:space-between;
   padding:14px 10%;
+}
+
+.brand{
+  font-weight:700;
+  letter-spacing:0.3px;
 }
 
 .links a{
@@ -43,18 +49,18 @@ body{
   font-size:14px;
 }
 
-.links a:hover{color:white;}
+.links a:hover{color:var(--text);}
 
 .hero{
   display:flex;
-  gap:40px;
-  padding:70px 10% 40px 10%;
   align-items:center;
   justify-content:space-between;
+  gap:40px;
+  padding:70px 10% 40px 10%;
 }
 
 .hero-card{
-  max-width:720px;
+  max-width:760px;
 }
 
 h1{
@@ -63,25 +69,31 @@ h1{
 }
 
 .lead{
+  margin:0 0 14px 0;
   color:var(--muted);
   line-height:1.7;
-  margin:0 0 14px 0;
 }
 
 .interests{
-  font-size:14px;
-  color:var(--muted);
   margin:6px 0 20px 0;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.6;
+}
+
+.actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
 }
 
 .btn{
+  display:inline-block;
   padding:11px 16px;
   border-radius:10px;
   text-decoration:none;
-  font-weight:bold;
-  margin-right:10px;
+  font-weight:700;
   font-size:14px;
-  display:inline-block;
 }
 
 .btn-primary{
@@ -89,9 +101,11 @@ h1{
   color:#053a28;
 }
 
+.btn-primary:hover{filter:brightness(0.95);}
+
 .btn-ghost{
   border:1px solid rgba(255,255,255,0.3);
-  color:white;
+  color:var(--text);
 }
 
 .btn-ghost:hover{background:rgba(255,255,255,0.08);}
@@ -100,18 +114,18 @@ h1{
   width:300px;
   border-radius:14px;
   border:1px solid rgba(255,255,255,0.18);
-  box-shadow: 0 14px 34px rgba(0,0,0,0.35);
+  box-shadow:0 14px 34px rgba(0,0,0,0.35);
 }
 
 .section{
-  background:white;
-  color:#111;
+  background:#ffffff;
+  color:#111111;
   padding:60px 10%;
 }
 
 .section h2{
-  color:#0f2742;
   margin:0 0 12px 0;
+  color:#0f2742;
 }
 
 .section p{
@@ -123,22 +137,25 @@ h1{
   margin:8px 0 0 18px;
 }
 
-a.inline-link{
+.inline-link{
   color:#0f2742;
   font-weight:700;
   text-decoration:none;
+  word-break:break-word;
 }
 
-a.inline-link:hover{ text-decoration:underline; }
+.inline-link:hover{
+  text-decoration:underline;
+}
 
 .footer{
   padding:25px 10%;
-  font-size:13px;
   color:rgba(255,255,255,0.7);
+  font-size:13px;
   border-top:1px solid rgba(255,255,255,0.15);
 }
 
-@media(max-width:900px){
+@media (max-width: 900px){
   .hero{flex-direction:column-reverse; align-items:flex-start;}
   .hero-img{width:100%; max-width:360px;}
   .nav-inner{padding:14px 6%;}
@@ -153,7 +170,7 @@ a.inline-link:hover{ text-decoration:underline; }
 
 <div class="nav">
   <div class="nav-inner">
-    <div><b>Aqeel Younas</b></div>
+    <div class="brand">Aqeel Younas</div>
     <div class="links">
       <a href="#research">Research</a>
       <a href="#thesis">Thesis</a>
@@ -163,20 +180,20 @@ a.inline-link:hover{ text-decoration:underline; }
   </div>
 </div>
 
-<div class="hero">
+<div class="hero" id="top">
   <div class="hero-card">
     <h1>Aqeel Younas</h1>
 
     <p class="lead">
-      I am Aqeel Younas, holding an MBA and a Master’s degree in Project Management and Business Engineering from CNAM Paris.
-      My research lies at the intersection of entrepreneurship, strategy, and SME development, with a focus on how
+      I hold an MBA and a Master’s degree in Project Management and Business Engineering from CNAM Paris.
+      My research sits at the intersection of entrepreneurship, strategy, and SME development, with a focus on how
       entrepreneurial leadership shapes firm competitiveness and firm performance in manufacturing SMEs.
     </p>
 
     <p class="lead">
       In my master’s thesis, I conducted a quantitative study using survey data from 200 manufacturing SMEs and tested
-      direct and mediation relationships using PLS-SEM in SmartPLS. The context of the study is Punjab, Pakistan, with a
-      focus on industrial clusters in Lahore, Sialkot, and Gujrat.
+      direct and mediation relationships using PLS-SEM in SmartPLS. The study focuses on industrial clusters in Punjab, Pakistan,
+      including Lahore, Sialkot, and Gujrat.
     </p>
 
     <p class="lead">
@@ -188,8 +205,10 @@ a.inline-link:hover{ text-decoration:underline; }
       Research interests: Entrepreneurial leadership, SME competitiveness, firm performance, PLS-SEM, emerging economy entrepreneurship, and industrial clusters.
     </p>
 
-    <a class="btn btn-primary" href="cv.pdf" target="_blank" rel="noopener">Download CV</a>
-    <a class="btn btn-ghost" href="#research">View research</a>
+    <div class="actions">
+      <a class="btn btn-primary" href="cv.pdf" target="_blank" rel="noopener">Download CV</a>
+      <a class="btn btn-ghost" href="#research">View research</a>
+    </div>
   </div>
 
   <img class="hero-img" src="Photo.jpg" alt="Aqeel Younas">
