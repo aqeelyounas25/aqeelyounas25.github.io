@@ -3,12 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aqeel Younas</title>
+<title>Aqeel Younas | Research Portfolio</title>
 
 <style>
 :root{
   --bg:#0f2742;
-  --card:#14365c;
   --text:#ffffff;
   --muted:rgba(255,255,255,0.8);
   --accent:#00d084;
@@ -26,22 +25,14 @@ body{
 .nav{
   position:sticky;
   top:0;
-  z-index:10;
-  background:rgba(15,39,66,0.92);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(255,255,255,0.12);
+  background:rgba(15,39,66,0.95);
+  border-bottom:1px solid rgba(255,255,255,0.15);
 }
 
 .nav-inner{
   display:flex;
-  align-items:center;
   justify-content:space-between;
   padding:14px 10%;
-}
-
-.brand{
-  font-weight:700;
-  letter-spacing:0.3px;
 }
 
 .links a{
@@ -51,169 +42,76 @@ body{
   font-size:14px;
 }
 
-.links a:hover{color:var(--text);}
+.links a:hover{color:white;}
 
 .hero{
   display:flex;
-  align-items:center;
-  justify-content:space-between;
   gap:40px;
-  padding:70px 10% 40px 10%;
+  padding:70px 10%;
+  align-items:center;
 }
 
 .hero-card{
-  background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.14);
-  border-radius:16px;
-  padding:26px;
-  max-width:680px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-  animation: fadeUp 700ms ease-out both;
+  max-width:700px;
 }
 
-.tag{
-  color:var(--accent);
-  font-weight:700;
-  margin:0;
-}
-
-h1{
-  font-size:44px;
-  margin:10px 0 10px 0;
-}
+h1{font-size:42px;margin:10px 0;}
 
 .lead{
-  margin:0 0 14px 0;
   color:var(--muted);
-  line-height:1.65;
+  line-height:1.7;
+  margin-bottom:14px;
 }
 
 .interests{
-  margin:0 0 18px 0;
-  color:var(--muted);
-  line-height:1.55;
   font-size:14px;
-}
-
-.actions{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
+  color:var(--muted);
+  margin-bottom:20px;
 }
 
 .btn{
-  display:inline-block;
-  padding:11px 14px;
-  border-radius:12px;
+  padding:11px 16px;
+  border-radius:10px;
   text-decoration:none;
-  font-weight:700;
+  font-weight:bold;
+  margin-right:10px;
   font-size:14px;
 }
 
-.btn-primary{
-  background:var(--accent);
-  color:#052b1f;
-}
-
-.btn-primary:hover{filter:brightness(0.95);}
-
-.btn-ghost{
-  border:1px solid rgba(255,255,255,0.22);
-  color:var(--text);
-}
-
-.btn-ghost:hover{background:rgba(255,255,255,0.08);}
+.btn-primary{background:var(--accent);color:#053a28;}
+.btn-ghost{border:1px solid rgba(255,255,255,0.3);color:white;}
 
 .hero-img{
-  width:320px;
-  border-radius:16px;
-  border:1px solid rgba(255,255,255,0.18);
-  box-shadow: 0 14px 34px rgba(0,0,0,0.35);
-  animation: fadeIn 900ms ease-out both;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:16px;
-  padding:0 10% 60px 10%;
-}
-
-.box{
-  background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.14);
-  border-radius:16px;
-  padding:18px;
-  animation: fadeUp 900ms ease-out both;
-}
-
-.box h3{
-  margin:0 0 8px 0;
-  font-size:16px;
-}
-
-.box p{
-  margin:0;
-  color:var(--muted);
-  line-height:1.5;
-  font-size:14px;
+  width:300px;
+  border-radius:14px;
 }
 
 .section{
-  background:#ffffff;
-  color:#1a1a1a;
+  background:white;
+  color:#111;
   padding:60px 10%;
 }
 
-.section h2{
-  margin:0 0 12px 0;
-  color:#0f2742;
-}
-
-.section p{
-  margin:0 0 12px 0;
-  line-height:1.6;
-}
-
-.list{
-  margin:8px 0 0 18px;
-}
+.section h2{color:#0f2742;}
 
 .footer{
-  padding:26px 10%;
-  color:rgba(255,255,255,0.7);
+  padding:25px 10%;
   font-size:13px;
-  border-top: 1px solid rgba(255,255,255,0.12);
+  color:rgba(255,255,255,0.7);
 }
 
-@keyframes fadeUp{
-  from{opacity:0; transform: translateY(14px);}
-  to{opacity:1; transform: translateY(0);}
-}
-
-@keyframes fadeIn{
-  from{opacity:0;}
-  to{opacity:1;}
-}
-
-@media (max-width: 980px){
-  .hero{flex-direction:column-reverse; align-items:flex-start;}
-  .hero-img{width:100%; max-width:360px;}
-  .grid{grid-template-columns:1fr;}
-  .nav-inner{padding:14px 6%;}
-  .hero{padding:60px 6% 30px 6%;}
-  .grid{padding:0 6% 50px 6%;}
-  .section{padding:50px 6%;}
-  .footer{padding:22px 6%;}
+@media(max-width:900px){
+  .hero{flex-direction:column-reverse;}
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <div class="nav">
   <div class="nav-inner">
-    <div class="brand">Aqeel Younas</div>
+    <div><b>Aqeel Younas</b></div>
     <div class="links">
       <a href="#research">Research</a>
       <a href="#thesis">Thesis</a>
@@ -223,99 +121,85 @@ h1{
   </div>
 </div>
 
+<!-- HERO / ABOUT -->
 <div class="hero">
   <div class="hero-card">
-    <p class="tag">About Me</p>
+
     <h1>Aqeel Younas</h1>
 
     <p class="lead">
-      I am Aqeel Younas, a Master’s graduate in Project Management and Business Engineering from CNAM Paris.
-      My research sits at the intersection of entrepreneurship, strategy, and SME development, with a focus on how
-      entrepreneurial leadership influences firm competitiveness and firm performance in manufacturing SMEs.
+I am Aqeel Younas, holding an MBA and a Master’s degree in Project Management and Business Engineering from CNAM Paris. 
+My research lies at the intersection of entrepreneurship, strategy, and SME development, with a focus on how 
+entrepreneurial leadership shapes firm competitiveness and firm performance in manufacturing SMEs.
     </p>
 
     <p class="lead">
-      In my master’s thesis, I conducted a quantitative study using survey data from 200 manufacturing SMEs and
-      analyzed structural relationships and mediation effects through PLS SEM in SmartPLS. This work contributes
-      evidence on SME growth and competitiveness in emerging economies, particularly within industrial clusters in
-      Punjab, Pakistan.
+In my master’s thesis, I conducted a quantitative study based on survey data from 200 manufacturing SMEs and examined 
+structural relationships and mediation effects using PLS-SEM in SmartPLS. This research provides empirical evidence on 
+SME growth and competitiveness in emerging economies, particularly within industrial clusters in Punjab, Pakistan.
     </p>
 
     <p class="lead">
-      I am now preparing to pursue a PhD to deepen this research agenda, expand cross country evidence, and develop
-      theory driven insights that support sustainable SME performance. I am especially interested in collaborative,
-      data driven research that links academic work with real managerial and policy impact.
+I am currently preparing to pursue a PhD to deepen this research agenda, extend cross-country evidence, and develop 
+theory-driven insights that support sustainable SME performance. I am especially interested in collaborative, data-driven 
+research that connects academic knowledge with meaningful managerial and policy impact.
     </p>
 
     <p class="interests">
-      Research interests: Entrepreneurial leadership, SME competitiveness, firm performance, PLS SEM, emerging economy
-      entrepreneurship, industrial clusters.
+Research interests: Entrepreneurial leadership, SME competitiveness, firm performance, PLS-SEM, emerging economy 
+entrepreneurship, and industrial clusters.
     </p>
 
-    <div class="actions">
-      <a class="btn btn-primary" href="cv.pdf" target="_blank" rel="noopener">Download CV</a>
-      <a class="btn btn-ghost" href="#research">View research</a>
-      <!-- Optional: if you upload a working paper PDF later, rename it to paper.pdf and enable this button -->
-      <!-- <a class="btn btn-ghost" href="paper.pdf" target="_blank" rel="noopener">Working paper</a> -->
-    </div>
+    <a class="btn btn-primary" href="cv.pdf" target="_blank">Download CV</a>
+    <a class="btn btn-ghost" href="#research">View Research</a>
+
   </div>
 
   <img class="hero-img" src="Photo.jpg" alt="Aqeel Younas">
 </div>
 
-<div class="grid">
-  <div class="box">
-    <h3>Research area</h3>
-    <p>Entrepreneurship, strategy, and SME growth in emerging markets.</p>
-  </div>
-  <div class="box">
-    <h3>Methods</h3>
-    <p>Survey design, SmartPLS, measurement model checks, structural paths, mediation testing.</p>
-  </div>
-  <div class="box">
-    <h3>Context</h3>
-    <p>Manufacturing SMEs in Punjab, Pakistan, with focus on Lahore, Sialkot, and Gujrat.</p>
-  </div>
-</div>
-
+<!-- RESEARCH -->
 <div class="section" id="research">
   <h2>Research</h2>
   <p>
-    I study how entrepreneurial leadership shapes firm competitiveness and firm performance in manufacturing SMEs.
-    My current work uses quantitative survey data and PLS SEM to test direct and mediated relationships.
+My work examines how entrepreneurial leadership influences firm competitiveness and firm performance in manufacturing SMEs 
+through quantitative structural modeling. I focus on emerging economies where SME development plays a critical role in 
+economic growth, innovation, and employment generation.
   </p>
 </div>
 
+<!-- THESIS -->
 <div class="section" id="thesis">
-  <h2>Master thesis</h2>
+  <h2>Master’s Thesis</h2>
   <p>
-    The Impact of Entrepreneurial Leadership on Firm Performance: The Mediating Role of Firm Competitiveness.
+The Impact of Entrepreneurial Leadership on Firm Performance: The Mediating Role of Firm Competitiveness.
   </p>
-  <ul class="list">
-    <li>Data: cross sectional survey, N = 200 manufacturing SMEs</li>
-    <li>Tool: SmartPLS (PLS SEM)</li>
-    <li>Model: EL to FP, and EL to FC to FP (mediation)</li>
+  <ul>
+    <li>Cross-sectional survey of 200 manufacturing SMEs</li>
+    <li>Analysis using SmartPLS (PLS-SEM)</li>
+    <li>Direct and mediation structural relationships</li>
   </ul>
 </div>
 
+<!-- PUBLICATIONS -->
 <div class="section" id="publications">
-  <h2>Publications and work in progress</h2>
+  <h2>Publications</h2>
   <p>
-    Working paper based on my master thesis. If you want, I can add a proper citation format here (APA style) and a
-    direct PDF link once you upload the file.
+Working paper based on the master’s thesis. Journal submission in progress.
   </p>
 </div>
 
+<!-- CONTACT -->
 <div class="section" id="contact">
   <h2>Contact</h2>
   <p>Email: aqeel.younas25@gmail.com</p>
   <p>Location: Paris, France</p>
-  <p>LinkedIn: add your link here</p>
-  <p>Google Scholar: add your link here</p>
+  <p>LinkedIn: add your profile link</p>
+  <p>Google Scholar: to be updated</p>
 </div>
 
 <div class="footer">
-  © Aqeel Younas
+© Aqeel Younas
 </div>
 
 </body>
