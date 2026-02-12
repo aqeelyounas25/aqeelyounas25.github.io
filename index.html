@@ -68,7 +68,6 @@ body{
   padding:26px;
   max-width:640px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-  animation: fadeUp 700ms ease-out both;
 }
 
 .tag{
@@ -79,13 +78,13 @@ body{
 
 h1{
   font-size:44px;
-  margin:10px 0 10px 0;
+  margin:10px 0;
 }
 
 .lead{
   margin:0 0 18px 0;
   color:var(--muted);
-  line-height:1.55;
+  line-height:1.6;
 }
 
 .actions{
@@ -108,21 +107,16 @@ h1{
   color:#052b1f;
 }
 
-.btn-primary:hover{filter:brightness(0.95);}
-
 .btn-ghost{
   border:1px solid rgba(255,255,255,0.22);
   color:var(--text);
 }
-
-.btn-ghost:hover{background:rgba(255,255,255,0.08);}
 
 .hero-img{
   width:320px;
   border-radius:16px;
   border:1px solid rgba(255,255,255,0.18);
   box-shadow: 0 14px 34px rgba(0,0,0,0.35);
-  animation: fadeIn 900ms ease-out both;
 }
 
 .grid{
@@ -137,7 +131,6 @@ h1{
   border:1px solid rgba(255,255,255,0.14);
   border-radius:16px;
   padding:18px;
-  animation: fadeUp 900ms ease-out both;
 }
 
 .box h3{
@@ -179,16 +172,6 @@ h1{
   border-top: 1px solid rgba(255,255,255,0.12);
 }
 
-@keyframes fadeUp{
-  from{opacity:0; transform: translateY(14px);}
-  to{opacity:1; transform: translateY(0);}
-}
-
-@keyframes fadeIn{
-  from{opacity:0;}
-  to{opacity:1;}
-}
-
 @media (max-width: 980px){
   .hero{flex-direction:column-reverse; align-items:flex-start;}
   .hero-img{width:100%; max-width:360px;}
@@ -220,14 +203,20 @@ h1{
   <div class="hero-card">
     <p class="tag">About Me</p>
     <h1>Aqeel Younas</h1>
+
     <p class="lead">
-      Master in Project Management and Business Engineering from CNAM Paris.
-      My research focuses on entrepreneurial leadership, SME competitiveness,
-      and firm performance using quantitative PLS SEM analysis.
+I am Aqeel Younas, a Master’s graduate in Project Management and Business Engineering from CNAM Paris. 
+My research lies at the intersection of entrepreneurship and strategy, focusing on how entrepreneurial 
+leadership shapes firm competitiveness and firm performance in manufacturing SMEs. 
+
+In my master’s thesis, I analyzed survey data from 200 manufacturing SMEs using PLS SEM in SmartPLS 
+to examine both direct effects and mediation mechanisms. I am now preparing to pursue a PhD to deepen 
+this research and contribute to evidence based knowledge on SME growth and competitiveness in 
+emerging economies.
     </p>
 
     <div class="actions">
-      <a class="btn btn-primary" href="cv.pdf" target="_blank" rel="noopener">Download CV</a>
+      <a class="btn btn-primary" href="cv.pdf" target="_blank">Download CV</a>
       <a class="btn btn-ghost" href="#research">View research</a>
     </div>
   </div>
@@ -242,37 +231,36 @@ h1{
   </div>
   <div class="box">
     <h3>Methods</h3>
-    <p>Survey design, SmartPLS, measurement model checks, structural paths, mediation testing.</p>
+    <p>Survey design, SmartPLS, structural modeling, and mediation testing.</p>
   </div>
   <div class="box">
     <h3>Context</h3>
-    <p>Manufacturing SMEs in Punjab, Pakistan, with focus on Lahore, Sialkot, and Gujrat.</p>
+    <p>Manufacturing SMEs in Punjab, Pakistan, focusing on Lahore, Sialkot, and Gujrat.</p>
   </div>
 </div>
 
 <div class="section" id="research">
   <h2>Research</h2>
   <p>
-    I study how entrepreneurial leadership shapes firm competitiveness and firm performance in manufacturing SMEs.
-    My current work uses quantitative survey data and PLS SEM to test direct and mediated relationships.
+    I study how entrepreneurial leadership shapes firm competitiveness and firm performance in manufacturing SMEs using quantitative methods and PLS SEM analysis.
   </p>
 </div>
 
 <div class="section" id="thesis">
   <h2>Master thesis</h2>
   <p>
-    The Impact of Entrepreneurial Leadership on Firm Performance: The Mediating Role of Firm Competitiveness.
+    The Impact of Entrepreneurial Leadership on Firm Performance with the mediating role of Firm Competitiveness.
   </p>
   <ul class="list">
-    <li>Data: cross sectional survey, N = 200 manufacturing SMEs</li>
-    <li>Tool: SmartPLS (PLS SEM)</li>
-    <li>Model: EL to FP, and EL to FC to FP (mediation)</li>
+    <li>Cross sectional survey of 200 manufacturing SMEs</li>
+    <li>Analysis using SmartPLS</li>
+    <li>Direct and mediation structural relationships</li>
   </ul>
 </div>
 
 <div class="section" id="publications">
-  <h2>Publications and work in progress</h2>
-  <p>Working paper based on my master thesis, currently under review.</p>
+  <h2>Publications</h2>
+  <p>Working paper based on the master thesis, currently under review.</p>
 </div>
 
 <div class="section" id="contact">
